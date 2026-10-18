@@ -1,8 +1,8 @@
-# Voice Knowledge Agent
+# 🎙️ Voice Knowledge Agent
 
 A bilingual voice assistant for asking questions about your own PDF documents. Upload files, speak in English or Urdu, and hear answers based on the retrieved passages. The application runs as a React frontend with a FastAPI backend and a local document index.
 
-## Features
+## 🚀 Features
 
 ### Document knowledge base
 
@@ -19,7 +19,7 @@ A bilingual voice assistant for asking questions about your own PDF documents. U
 - Interrupt a spoken reply, switch between English and Urdu, and ask follow-up questions.
 - Choose Edge neural voices or local Piper speech synthesis.
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 | Layer | Technology |
 | --- | --- |
@@ -30,7 +30,7 @@ A bilingual voice assistant for asking questions about your own PDF documents. U
 | Language model | Ollama (Qwen 2.5 7B Instruct by default) |
 | Speech output | Edge TTS by default; Piper as a local option |
 
-## How It Works
+## 🧠 How It Works
 
 ```text
 PDFs → text extraction → chunks → BGE-M3 embeddings → ChromaDB
@@ -48,7 +48,7 @@ Microphone → AudioWorklet → WebSocket → VAD → Whisper  │
 
 The model receives retrieved document passages and is instructed to answer only from that context. The backend keeps the last three conversation turns for follow-up questions.
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
 voice-kb-agent/
@@ -71,7 +71,7 @@ voice-kb-agent/
     └── package.json
 ```
 
-## Setup Instructions
+## ⚙️ Setup Instructions
 
 The commands below use **Windows PowerShell**. You need Python 3.10 or 3.11, Node.js 18 or later, and [Ollama](https://ollama.com/download). Allow several gigabytes of free disk space for the language, embedding, and speech models. An NVIDIA GPU is optional.
 
@@ -126,20 +126,22 @@ You can also ingest PDFs from a terminal inside `backend`:
 .\.venv\Scripts\python.exe ingest.py .\path\to\document.pdf
 ```
 
-## Speech Output Options
+## 🔊 Speech Output Options
 
 `TTS_ENGINE=edge` is the default. It uses Microsoft Edge neural voices and **requires an internet connection for speech synthesis**. Document storage, retrieval, transcription, and Ollama generation run locally after their models are downloaded.
 
 For offline speech output on Windows, set `TTS_ENGINE=piper` in `backend/.env`, run `python download_voices.py` with the backend virtual environment, and place the Piper Windows executable plus its supporting files in `backend/piper/`. The configured English and Urdu voice models belong in `backend/voices/`. These downloaded binaries and models are intentionally excluded from Git.
 
-## Notes
+## 📌 Notes
 
 - Scanned or image-only PDFs need OCR before ingestion; the current pipeline extracts selectable text with `pypdf`.
 - Uploaded PDFs, the ChromaDB index, voice models, Piper binaries, virtual environments, and local `.env` files are excluded from the repository.
 - The API is designed for local use and does not include user authentication. Do not expose it directly to the public internet.
 - Performance depends on the selected models and hardware; no fixed latency is promised.
 
-## Author
+## 🙋 Author
 
 **Syed Muhammad Faizan Ali**  
-[GitHub](https://github.com/Slayer9966) · [LinkedIn](https://www.linkedin.com/in/faizanali-ml/) · [Email](mailto:faizandev666@gmail.com)
+📍 Pakistan  
+📧 [faizandev666@gmail.com](mailto:faizandev666@gmail.com)  
+🔗 [GitHub](https://github.com/Slayer9966) | [LinkedIn](https://www.linkedin.com/in/faizanali-ml/)
