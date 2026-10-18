@@ -1,0 +1,41 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Python environments, caches, and build output
+**/.venv/
+**/venv/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage*
+htmlcov/
+
+# Private documents, vector index, downloaded voices, and binaries
+/backend/data/
+/backend/voices/
+/backend/piper/
+*.pdf
+*.onnx
+*.onnx.json
+*.gguf
+*.safetensors
+*.pth
+
+# Frontend dependencies and output
+**/node_modules/
+**/dist/
+**/.vite/
+*.tsbuildinfo
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

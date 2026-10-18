@@ -1,0 +1,15 @@
+# Local settings and Python environment
+.env
+.env.*
+!.env.example
+!.env.*.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# User documents and generated assets
+data/
+voices/
+piper/
