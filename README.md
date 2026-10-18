@@ -139,6 +139,10 @@ For offline speech output on Windows, set `TTS_ENGINE=piper` in `backend/.env`, 
 - The API is designed for local use and does not include user authentication. Do not expose it directly to the public internet.
 - Performance depends on the selected models and hardware; no fixed latency is promised.
 
+## 📜 License
+
+Licensed under the [MIT License](LICENSE) — use, modify, and distribute the code under its terms.
+
 ## 🙋 Author
 
 **Syed Muhammad Faizan Ali**  
